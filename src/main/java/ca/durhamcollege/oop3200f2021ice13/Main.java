@@ -36,18 +36,18 @@ public class Main extends Application
         Button clickMeButton = new Button("Click me");
         clickMeButton.setStyle("-fx-font-family: Arial");
 
-        FileInputStream imagePath = new FileInputStream("src/sample/xboxseriesx.jpg");
+        FileInputStream imagePath = new FileInputStream("src/main/java/ca/durhamcollege/oop3200f2021ice13/xbox.jpg");
 
         // step 1 for images - is load the image
-        Image xboxSeriesX = new Image(imagePath);
+        Image xbox = new Image(imagePath);
 
         // step 2 for images - is setup a ImageView to "contain it"
-        ImageView consoleImageView = new ImageView(xboxSeriesX);
+        ImageView consoleImageView = new ImageView(xbox);
         consoleImageView.setFitWidth(400);
         consoleImageView.setPreserveRatio(true);
 
-        FileInputStream ps5Path = new FileInputStream("src/sample/ps5.jpg");
-        Image ps5 = new Image(ps5Path);
+        FileInputStream haloPath = new FileInputStream("src/main/java/ca/durhamcollege/oop3200f2021ice13/halo.jpg");
+        Image halo = new Image(haloPath);
 
  /*
         Label helloLabel = new Label("Hello, World");
@@ -66,8 +66,8 @@ public class Main extends Application
             @Override
             public void handle(ActionEvent event)
             {
-                imageLabel.setText("PS5!");
-                consoleImageView.setImage(ps5);
+                imageLabel.setText("HALO Xbox!");
+                consoleImageView.setImage(halo);
             }
         }
 
