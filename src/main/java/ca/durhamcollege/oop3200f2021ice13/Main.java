@@ -28,8 +28,6 @@ public class Main extends Application
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
-        //Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         primaryStage.setTitle("Hello, World!");
 
         // Step 1 - create one or more control
@@ -55,14 +53,21 @@ public class Main extends Application
         });
 
         // Step 2 - create a container
-        // HBox hbox = new HBox(helloLabel, clickMeBUtton);
-        //VBox vbox = new VBox(helloLabel, clickMeBUtton);
+        HBox hBox = new HBox(10, helloLabel, goodByeLabel);
+        hBox.setAlignment(Pos.CENTER);
 
         GridPane gridPane = new GridPane();
+        gridPane.setVgap(10);
+        gridPane.setHgap(10);
+        gridPane.setPadding(new Insets(10));
 
         gridPane.add(helloLabel, 1, 0);
         gridPane.add(goodByeLabel, 1, 1);
         gridPane.add(clickMeButton, 2, 2);
+
+        gridPane.setBorder(new Border(new BorderStroke(Color.BLUE,
+                BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
+        gridPane.setStyle("-fx-border-color: RED");
 
         // Step 3 - add layout container to scene
         Scene scene = new Scene(gridPane, WIDTH, HEIGHT);
