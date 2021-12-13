@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                ca.durhamcollege.oop3200f2021ice13/ca.durhamcollege.oop3200f2021ice13.HelloApplication
+                                ca.durhamcollege.oop3200f2021ice13/ca.durhamcollege.oop3200f2021ice13.Main
                             </mainClass>
                         </configuration>
                     </execution>

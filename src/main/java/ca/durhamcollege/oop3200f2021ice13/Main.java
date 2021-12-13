@@ -1,30 +1,36 @@
 package ca.durhamcollege.oop3200f2021ice13;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 
-public class HelloApplication extends Application
+public class Main extends Application
 {
     public static int WIDTH = 640;
     public static int HEIGHT = 480;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+    public void start(Stage primaryStage) throws IOException {
+        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
         //Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello, World!");
+        primaryStage.setTitle("Hello, World!");
 
         // Step 1 - create one or more control
         Label helloLabel = new Label("Hello, World");
@@ -62,9 +68,9 @@ public class HelloApplication extends Application
         Scene scene = new Scene(gridPane, WIDTH, HEIGHT);
 
         // Step 4 - add scene to stage
-        stage.setScene(scene);
+        primaryStage.setScene(scene);
 
-        stage.show();
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
